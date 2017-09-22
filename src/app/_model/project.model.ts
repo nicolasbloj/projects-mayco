@@ -1,6 +1,7 @@
 export class Project {
 
+    public id: number;
     public name: string;
-    public img: ImageData[];
+    public image: ImageData[];
 
 }
