@@ -11,7 +11,9 @@ import { RestClientService } from '../../_service/rest-client.service';
 @Injectable()
 export class ProjectService {
 
-  URL_BASE = 'http://localhost:8080';
+  // URL_BASE = 'http://localhost:8080';
+
+  URL_BASE = 'https://mayco-backend.herokuapp.com';
 
   URL_RESUORCE_LIST = '/project/list';
 
