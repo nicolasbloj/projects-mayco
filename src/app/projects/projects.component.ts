@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   URL = 'http://localhost:8080/project/list';
 
   projects: Project[] = [
-    { id: 0, name: 'test', image: null }
+    { id: 0, name: 'test', imageEncoded: null, imageDecoded:null }
   ];
 
   constructor(private _projectService: ProjectService) { }

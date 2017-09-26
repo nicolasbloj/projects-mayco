@@ -2,5 +2,6 @@
   projects works!
 </p>
 <div *ngFor="let project of projects">
-  {{project.id}} -- {{project.name}} -- imagen omitida 
+  {{project.id}} -- {{project.name}} -- {{project.imageEncoded}} -- {{project.imageDecoded}}
+  <img style='display:block;  width:200px;height:200px;' id='base64image' src="{{'data:image/jpeg;base64,'+project.imageEncoded}}">
 </div>
