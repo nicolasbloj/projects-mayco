@@ -1,7 +1,24 @@
-<p>
-  projects works!
-</p>
+Ingresar nombre de imagen<br>
+<input type="text" [(ngModel)]="project_aux.name" >
+
+<div>
+  <div>
+    <label for="filePicker">Choose or drag a file:</label><br>
+    <input type="file" id="filePicker" (change)="handleFileSelect($event)">
+  </div>
+  <br>
+  <div>
+    <h1>Base64 encoded version</h1>
+    <textarea id="base64textarea" placeholder="Base64 will appear here" cols="50" rows="15">{{base64textString}}</textarea>
+  </div>
+</div>
+
+<button (click)="upload()">Subir imagen</button>
+
+<hr>
+<br><br>
+<h3>Imagenes obtenidas desde el servidor</h3>
 <div *ngFor="let project of projects">
-  {{project.id}} -- {{project.name}} -- {{project.imageEncoded}} -- {{project.imageDecoded}}
+  {{project.id}} -- {{project.name}}
   <img style='display:block;  width:200px;height:200px;' id='base64image' src="{{'data:image/jpeg;base64,'+project.imageEncoded}}">
 </div>

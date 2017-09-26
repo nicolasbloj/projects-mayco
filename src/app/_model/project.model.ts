@@ -1,8 +1,12 @@
 export class Project {
 
-    public id: number;
-    public name: string;
-    public imageEncoded: string;
-    public imageDecoded: string;
-    
+    constructor(name: string);
+
+    constructor(
+        public name: string,
+        public imageEncoded?: string,
+        public imageDecoded?: string,
+        public id?: number
+    ) { }
+
 }
